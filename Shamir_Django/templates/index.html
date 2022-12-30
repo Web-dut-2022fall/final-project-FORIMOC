@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shamir Demo</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/jquery-3.6.0.js"></script>
+</head>
+<body>
+<div class="Shamir">
+    <div class="header">
+        <h1>Shamir传统门限密钥分享</h1>
+    </div>
+    <div class="generate">
+        <div class="params">
+            <div class="input-box">
+                t: <input id="t" type="number">
+                n: <input id="n" type="number">
+            </div>
+            <div class="btn-wrapper">
+                <button id="generator">生成秘密和密钥</button>
+            </div>
+        </div>
+        <div class="secret-box">
+            <div id="secret"></div>
+            <div id="decrypted_secret"></div>
+            <div id="points"></div>
+        </div>
+    </div>
+    <div class="decrypt">
+        <div class="btn-wrapper">
+            <button id="decryptor">解密</button>
+        </div>
+    </div>
+</div>
+
+<div class="vcs">
+    <div class="header">
+        <h1>ShamirVCS可视化图片密钥分享</h1>
+    </div>
+    <div class="about">
+        <h2>生成方案说明</h2>
+        <p>6x6 扩展，9种白色块模式</p>
+        <p>上方为9张密钥图片，下方分别为2~9张密钥图片的重合图像</p>
+    </div>
+    <div class="btn-wrapper">
+        <button id="vcs-generator">生成图片密钥</button>
+    </div>
+    <div id="vcs-pic">
+        <div class="pic-content"><div>pic1.jpg</div><img src="/static/images/pic1.jpg"></div>
+        <div class="pic-content"><div>pic2.jpg</div><img src="/static/images/pic2.jpg"></div>
+        <div class="pic-content"><div>pic3.jpg</div><img src="/static/images/pic3.jpg"></div>
+        <div class="pic-content"><div>pic4.jpg</div><img src="/static/images/pic4.jpg"></div>
+        <div class="pic-content"><div>pic5.jpg</div><img src="/static/images/pic5.jpg"></div>
+        <div class="pic-content"><div>pic6.jpg</div><img src="/static/images/pic6.jpg"></div>
+        <div class="pic-content"><div>pic7.jpg</div><img src="/static/images/pic7.jpg"></div>
+        <div class="pic-content"><div>pic8.jpg</div><img src="/static/images/pic8.jpg"></div>
+        <div class="pic-content"><div>pic9.jpg</div><img src="/static/images/pic9.jpg"></div>
+    </div>
+    <div class="div"></div>
+    <div id="combined-pic">
+        <div class="pic-content"><div>secret_x2.jpg</div><img src="/static/images/secret_x2.jpg"></div>
+        <div class="pic-content"><div>secret_x3.jpg</div><img src="/static/images/secret_x3.jpg"></div>
+        <div class="pic-content"><div>secret_x4.jpg</div><img src="/static/images/secret_x4.jpg"></div>
+        <div class="pic-content"><div>secret_x5.jpg</div><img src="/static/images/secret_x5.jpg"></div>
+        <div class="pic-content"><div>secret_x6.jpg</div><img src="/static/images/secret_x6.jpg"></div>
+        <div class="pic-content"><div>secret_x7.jpg</div><img src="/static/images/secret_x7.jpg"></div>
+        <div class="pic-content"><div>secret_x8.jpg</div><img src="/static/images/secret_x8.jpg"></div>
+        <div class="pic-content"><div>secret_x9.jpg</div><img src="/static/images/secret_x9.jpg"></div>
+    </div>
+</div>
+
+
+
+</body>
+<script>
+    // 生成秘密和密钥
+    $('#generator').click(function () {
+        var t = document.getElementById('t').value
+        var n = document.getElementById('n').value
+        var data = {
+            t: t,
+            n: n,
+        }
+        $.post('/generate', data, function (result) {
+            result = JSON.parse(result)
+            $('#secret').html('')
+            $('#decrypted_secret').html('')
+            if (result.code === 200) {
+                $('#secret').append('<p>secret: '+result.secret+'</p>')
+            }else {
+                $('#secret').append('<p>'+result.msg+'</p>')
+            }
+            $('#points').html('')
+            for (var i=0;i<result.points.length;i++){
+                 $('#points').append('<p class="point"><input type="checkbox"/>'+result.points[i][1]+'</p>')
+            }
+        })
+    })
+
+    // 解密
+    $('#decryptor').click(function () {
+        var selected_points = []
+        var i=0
+        $('.point').each(function (index) {
+            if ($(this).children('input[type=checkbox]').prop('checked')){
+                selected_points.push([])
+                selected_points[i].push(index+1)
+                selected_points[i].push($(this).html().replace(/<[^>]+>/g, ""))
+                i++
+            }
+        })
+        var data = {
+            points: selected_points
+        }
+        $.ajax({
+            type: 'post',
+            url: '/decrypt',
+            data: JSON.stringify(data),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (result){
+                $('#decrypted_secret').html('')
+                $('#decrypted_secret').append('<p>decrypted_secret: '+result.decrypted_secret+'</p>')
+            }
+        })
+    })
+
+    // 生成ShamirVCS图片
+    $('#vcs-generator').click(function () {
+        $.post('/vcs', function () {
+            location.reload()
+        })
+    })
+</script>
+</html>

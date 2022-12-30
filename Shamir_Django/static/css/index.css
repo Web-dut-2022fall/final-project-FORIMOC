@@ -1,0 +1,257 @@
+/*Rubik字体*/
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/rubik/v19/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/*Rubik字体*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+body{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Shamir{
+    margin: 30px;
+    padding: 30px;
+    width: 30%;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+    height: 90vh;
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header h1{
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+.input-box{
+    font-size: 1.5em;
+    font-weight: 200;
+    text-align: center;
+}
+.input-box input{
+    font-size: 0.8em;
+    padding: 4px;
+    font-weight: 200;
+    width: 100px;
+}
+
+.secret-box{
+    font-size: 1.5em;
+    font-weight: 200;
+    text-align: center;
+}
+.secret-box div{
+    margin: 10px;
+}
+
+.point input[type="checkbox"]{
+    font-size: 1.5em;
+    width: 16px;
+    height: 16px;
+    line-height: 1.5em;
+    margin-right: 10px;
+}
+
+.vcs{
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+    margin: 30px;
+    padding: 30px;
+    width: 60%;
+    height: 90vh;
+}
+
+.about h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.about p{
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+#vcs-pic{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pic-content{
+    margin: 5px;
+}
+.pic-content div{
+    text-align: center;
+    font-size: 1.2em;
+    color: #222f3e;
+}
+
+#combined-pic{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.div{
+    margin: 20px;
+    position: relative;
+    height: 2px;
+    background-color: #8395a7;
+    border-radius: 6px;
+    left: 0;
+    width: 95%;
+}
+
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-wrapper button{
+  border: none;
+  border-radius: 6px;
+  font-family: Rubik, sans-serif;
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 6px 20px 6px 20px;
+  margin: 10px;
+  background: #c7ecee;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-wrapper button:hover{
+  background: #192a56;
+  color: #fff;
+}
